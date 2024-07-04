@@ -1,8 +1,15 @@
 import React from "react";
+import Hero2 from "./Hero2";
+import Hero4 from "./Hero4";
+import AcordionPage from "./AcordionPage";
+import NashiSlider from "./NashiSlider";
+import BrendCar from "./BrendCar";
 
 const Hero3 = () => {
   return (
+    
     <div class="mx-auto mb-[150px] px-5 max-w-[1300px]">
+      <Hero4/>
       <h3 class="mb-10 text-[30px] font-medium leading-[120%]">
         Почему выбирают нас?
       </h3>
@@ -113,108 +120,15 @@ const Hero3 = () => {
           <p class="font-medium leading-[140%]">Лет на рынке</p>
         </div>
       </div>
-      <div class="bg-[#E5E4ED] py-[100px] mt-10 px-5">
-        <div class="mx-auto flex max-w-[1440px] justify-between pb-[100px]">
-          <h3 class="text-[30px] font-medium leading-[120%]">Наши клиенты</h3>
-          <p class="text-5xl font-medium leading-[110%]">
-            БОЛЕЕ <span class="text-[#088269]">5000</span> <br /> УСПЕШНЫХ
-            ПРОЕКТОВ
-          </p>
-        </div>
+      <div className="flex flex-col gap-8">
+        <Hero2/>
+      <NashiSlider/>
+      <BrendCar/>
+      <AcordionPage/>
       </div>
-      <div class="mb-[150px] px-5 bg-[#088269] py-[100px]">
-        <div class="mx-auto flex max-w-[1440px] justify-between text-[#f8f7f3]">
-          <div class="text-[30px] font-medium leading-[120%]">
-            Информация о компании
-          </div>
-          <div>
-            <div class="w-[650px] border-y border-[#f8f7f3]">
-              <button class="flex w-full items-center justify-between py-6 focus:outline-none">
-                <span>О компании</span>
-                <span class="flex h-8 w-8 items-center justify-center rounded-[40px] border border-[#F8F7F3] transition duration-300 ease-in-out">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M10 3V17M3 10H17"
-                      stroke="#F8F7F3"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div class="w-[650px] border-y border-[#f8f7f3]">
-              <button class="flex w-full items-center justify-between py-6 focus:outline-none">
-                <span>Преимущества сотрудников</span>
-                <span class="flex h-8 w-8 items-center justify-center rounded-[40px] border border-[#F8F7F3] transition duration-300 ease-in-out">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M10 3V17M3 10H17"
-                      stroke="#F8F7F3"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div class="w-[650px] border-y border-[#f8f7f3]">
-              <button class="flex w-full items-center justify-between py-6 focus:outline-none">
-                <span>Достижения компании</span>
-                <span class="flex h-8 w-8 items-center justify-center rounded-[40px] border border-[#F8F7F3] transition duration-300 ease-in-out">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M10 3V17M3 10H17"
-                      stroke="#F8F7F3"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div class="w-[650px] border-y border-[#f8f7f3]">
-              <button class="flex w-full items-center justify-between py-6 focus:outline-none">
-                <span>Карьерный рост</span>
-                <span class="flex h-8 w-8 items-center justify-center rounded-[40px] border border-[#F8F7F3] transition duration-300 ease-in-out">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M10 3V17M3 10H17"
-                      stroke="#F8F7F3"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+      
       <div className="bg-[#088269]">
         <div class="flex justify-between border-b border-[#F8F7F3] pb-14 pt-10 px-5">
           <div>

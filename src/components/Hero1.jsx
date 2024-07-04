@@ -1,53 +1,106 @@
 import React from "react";
-import Products from "../../src/data/data.json";
+import { CategoryData } from "../../src/data/data";
+import { Link } from "react-router-dom";
 
 const Hero1 = () => {
-  const products = Products.slice(0, 8);
-
   return (
-    <div className="mx-auto flex w-full max-w-full items-center justify-between px-5">
-      <section className="mx-auto my-12 w-full max-w-[1300px] px-5 md:my-[100px]">
-        <div className="mb-6 flex items-center justify-between sm:mb-8 md:mb-10">
-          <h2 className="text-[18px] font-medium text-[#202020] sm:text-[20px] md:text-[30px]">
-            Популярные категории
-          </h2>
-          <button className="hidden rounded-[50px] bg-[#088269] px-5 py-2 text-[12px] font-semibold text-[#F8F7F3] sm:block sm:text-[14px] md:px-7 md:py-3 md:text-[16px]">
+    <div className="mx-auto px-4 max-w-[1440px] md:px-5 lg:px-4">
+      <div className="mb-10 flex items-center justify-between">
+        <h2 className="text-lg font-medium leading-[120%] md:text-xl lg:text-[30px]">
+          Популярные категории
+        </h2>
+        <Link to="/catalog">
+          <button className="rounded-[50px] bg-[#088269] px-5 py-2 text-[#F8F7F3] outline-none transition duration-300 ease-in-out hover:bg-[#07745E] focus:outline-none md:text-[12px] lg:px-[30px] lg:py-[11px] lg:text-sm">
             Все категории
           </button>
-        </div>
-        <div className="grid grid-flow-row gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-          {products.map((product) => (
+        </Link>
+      </div>
+      <div className="grid grid-cols-2 gap-[10px] md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-rows-2 gap-[10px]">
+          {CategoryData.slice(0, 2).map((item) => (
             <div
-              key={product.document_id}
-              className="flex flex-col rounded-[10px] border-[1px] border-[#E5E2EE] overflow-hidden"
+              key={item.id}
+              className="w-full flex-shrink-0 rounded-[10px] border border-[#E5E2EE] bg-[#F8F7F3]"
             >
-              <img
-                src={product.img}
-                alt={product.commercial_name}
-                className="w-full h-48 object-cover"
-                height={192}
-              />
-              <div className="flex-grow px-4 py-3">
-                <h5
-                  className="text-[#202020] text-[16px] font-semibold mb-1"
-                  title={product.commercial_name}
-                >
-                  {product.commercial_name}
-                </h5>
-                <p className="text-[#7A7687] text-[12px] font-normal">
-                  Артикул: {product.document_id}
+              <div className="flex w-full items-center justify-center rounded-t-[10px] border-b border-[#E5E2EE] bg-white lg:h-[220px]">
+                <img
+                  src={item.image}
+                  alt="Slider Img"
+                  className="rounded-t-[10px] object-cover"
+                />
+              </div>
+              <div className="px-4 py-4 lg:px-6 lg:py-5">
+                <p className="font-medium md:text-sm md:leading-[118%] lg:text-[16px] lg:leading-[140%]">
+                  {item.text}
                 </p>
-                <p className="text-[#7A7687] text-[12px] font-normal mb-3">
-                  В наличии
-                </p>
-                <span className="block font-semibold text-[16px]">
-                  {product.document_id.toLocaleString()} руб.
-                </span>
               </div>
             </div>
           ))}
         </div>
-      </section>
+        <div className="grid grid-rows-1">
+          {CategoryData.slice(2, 3).map((item) => (
+            <div
+              key={item.id}
+              className="w-full flex-shrink-0 rounded-[10px] border border-[#E5E2EE] bg-[#F8F7F3]"
+            >
+              <div className="flex h-[515px] w-full items-center justify-center rounded-t-[10px] border-b border-[#E5E2EE] bg-white">
+                <img
+                  src={item.image}
+                  alt="Slider Img"
+                  className="rounded-t-[10px] object-cover"
+                />
+              </div>
+              <div className="px-4 py-4 lg:px-6 lg:py-5">
+                <p className="font-medium md:text-sm md:leading-[118%] lg:text-[16px] lg:leading-[140%]">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-rows-2 gap-[10px]">
+          {CategoryData.slice(3, 5).map((item) => (
+            <div
+              key={item.id}
+              className="w-full flex-shrink-0 rounded-[10px] border border-[#E5E2EE] bg-[#F8F7F3]"
+            >
+              <div className="flex h-[220px] w-full items-center justify-center rounded-t-[10px] border-b border-[#E5E2EE] bg-white">
+                <img
+                  src={item.image}
+                  alt="Slider Img"
+                  className="rounded-t-[10px] object-cover"
+                />
+              </div>
+              <div className="px-4 py-4 lg:px-6 lg:py-5">
+                <p className="font-medium md:text-sm md:leading-[118%] lg:text-[16px] lg:leading-[140%]">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="gap-[10px] md:flex lg:grid lg:grid-rows-2">
+          {CategoryData.slice(5, 7).map((item) => (
+            <div
+              key={item.id}
+              className="w-full flex-shrink-0 rounded-[10px] border border-[#E5E2EE] bg-[#F8F7F3]"
+            >
+              <div className="flex h-[220px] w-full items-center justify-center rounded-t-[10px] border-b border-[#E5E2EE] bg-white">
+                <img
+                  src={item.image}
+                  alt="Slider Img"
+                  className="rounded-t-[10px] object-cover"
+                />
+              </div>
+              <div className="px-4 py-4 lg:px-6 lg:py-5">
+                <p className="font-medium md:text-sm md:leading-[118%] lg:text-[16px] lg:leading-[140%]">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

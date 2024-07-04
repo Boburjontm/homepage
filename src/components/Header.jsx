@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         
         <div className="flex items-center space-x-4">
-          <img src={Logo} alt="Logo" className="h-8" />
+          <a href="http://localhost:5174/"><img src={Logo} alt="Logo" className="h-8" /></a>
           
         </div>
         <div className="flex items-center space-x-4">
